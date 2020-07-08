@@ -63,7 +63,7 @@ $(function(){
         }
     $.ajax({
         type:"GET",
-        url:`http://api.openweathermap.org/data/2.5/weather?q=${$('input.city_input').val()}&APPID=7ad0f14cc2159dcf1be3f5d7ab3d5316`,
+        url:`https://api.openweathermap.org/data/2.5/weather?q=${$('input.city_input').val()}&APPID=7ad0f14cc2159dcf1be3f5d7ab3d5316`,
         success:function(data){
             var working_item;
             working_item = container.clone()
@@ -74,7 +74,7 @@ $(function(){
             $(".location .coords #lat span.val", working_item).html(`${lat_format[0]}&#176 ${lat_format[1]}' ${lat_format[2]}'' ${lat_format[3]}`);
             $(".location .coords #long span.val", working_item).html(`${lon_format[0]}&#176 ${lon_format[1]}' ${lon_format[2]}'' ${lon_format[3]}`);
             $("#marker", working_item).attr("href",`https://www.google.com/maps/search/?api=1&query=${data.coord.lat},${data.coord.lon}`)
-            $(".icon-wrapper img", working_item).attr("src",`http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`);
+            $(".icon-wrapper img", working_item).attr("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`);
             $(".weather-desc span.main", working_item).text(data.weather[0].main);
             $(".weather-desc span.dsc", working_item).text(data.weather[0].description);
             $(".conditions .temp span.val", working_item).text((data.main.temp -273).toFixed(2));
