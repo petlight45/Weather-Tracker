@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <script src="script/jquery-3.5.1.min.js"></script>
+    <script src="script/script.js"></script>
+    <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+</head>
+<body>
+    <header>
+        <h3 class="header_text">Weather Tracker</h3>
+        <div class="controls"><input class="city_input" type="text" placeholder="City Name"><a href="#" class="button_go">Go</a>
+        </div>
+        </header>
+    <section id="output">
+        <div class="loader hidden"><div></div></div>
+        <div class="wrapper hidden">
+        <div class="location">
+            <div class="name"><span class="city">Ado</span>,<span class="country">NG</span></div>
+            <div class="coords">
+                <div id="lat">Latitude: <span class="val">100</span></div>
+                <div id="long">Longitude: <span class="val">100</span></div>
+            </div>
+            <a class="ti-location-pin" id="marker" target="_blank"></a>
+        </div>
+        <div class="icon-wrapper"><img src="http://openweathermap.org/img/wn/04d@2x.png" alt="No icon available"></div>
+        <div class="weather-desc">
+            <span class="main">Clouds</span>(<span class="dsc">Lorem, ipsum.</span>)
+        </div>
+        <div class="conditions">
+            <div class="temp"><span class="val">30</span>&#8451</div>
+            <div class="icons">
+            <div class="humid"><i class="img wi wi-humidity"></i><span class="val">60</span>%</div>
+            <div class="wind"><i class="img wi wi-windy"></i><span class="val">1.23</span>m/s</div>
+        </div>
+        </div>
+        <div class="s-illu">
+            <div class="sunrise">
+                <div class="value">Sunrise <div class="times"><span class="utc"></span><span class="local">05:57</span></div></div>
+                <div class="block"></div>
+            </div>
+            <div class="connect"></div>
+            <div class="sunset">
+                <div class="value">Sunset <div class="times"><span class="utc"></span><span class="local">05:57</span></div></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        </div>
+        <div class="error hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, placeat!</div>
+    </section>
+</body>
+</html>
