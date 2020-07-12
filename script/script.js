@@ -63,7 +63,7 @@ $(function(){
         }
     $.ajax({
         type:"GET",
-        url:`https://api.openweathermap.org/data/2.5/weather?q=${$('input.city_input').val()}&APPID=7ad0f14cc2159dcf1be3f5d7ab3d5316`,
+        url:`https://api.openweathermap.org/data/2.5/weather?q=${$('input.city_input').val()}&APPID=####`,
         success:function(data){
             var working_item;
             working_item = container.clone()
@@ -126,5 +126,4 @@ $(function(){
             $("#output").append(working_item)
         }
     });}
-
 })
